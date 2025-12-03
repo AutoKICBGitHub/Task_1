@@ -2,6 +2,8 @@ import pytest
 from unittest.mock import Mock
 
 from praktikum.bun import Bun
+from praktikum.burger import Burger
+from praktikum.database import Database
 from praktikum.ingredient import Ingredient
 from praktikum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
 
@@ -40,12 +42,10 @@ def mock_ingredient():
 
 @pytest.fixture
 def burger():
-    from praktikum.burger import Burger
     return Burger()
 
 
 @pytest.fixture
 def database():
-    from praktikum.database import Database
     return Database()
 
